@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="index">
+  <form bindsubmit="sendRed">
+    <view id="user" style="background-image:url(http://v.6le.com/static/login/images/banner_slide_02.jpg)">
+      <view id="user_info">
+        <image id="user_ava" class="user_avator" src="{{user.avatarUrl}}" />
+        <text id="user_nn">{{user.nickName}}</text>
+        <image src="../../images/s2.png" id="usergender" wx:if="{{user.gender==1}}" />
+        <image src="../../images/s1.png" id="usergender" wx:if="{{user.gender==2}}" />
+        <text id="user_sig">{{user.signature1}}</text>
+      </view>
+    </view>
+
+    <view>
+      <view style="padding:20rpx 50rpx 50rpx 50rpx;">
+        <view style="padding-top:50rpx;">
+          <text style="width:25%;float:left;text-align:left;margin-left:20rpx;">说点什么</text>
+          <input bindinput="textinput" data-type="1" placeholder="想说的话" style="border-bottom:1rpx solid #eee;width:55%;padding:0rpx 0rpx 5rpx 30rpx;"></input>
+        </view>
+        <view>
+          <text style='font-size:30rpx;margin-left:24rpx;color: #b2b2b2;'>小伙伴们说对暗号就能获取随机的福利</text>
+        </view>
+        <view style="padding-top:30rpx;">
+          <text style="width:25%;float:left;text-align:left;margin-left:20rpx;">赏金(元)</text>
+          <input bindinput="textinput" data-type="2" type='number' placeholder="输入金额" style="border-bottom:1rpx solid #eee;width:55%;padding:0rpx 0rpx 5rpx 30rpx;"></input>
+        </view>
+        <view style="padding-top:50rpx;">
+          <text style="width:25%;float:left;text-align:left;margin-left:20rpx;">数量(个)</text>
+          <input bindinput="textinput" data-type="3" type='number' placeholder="输入数量" style="border-bottom:1rpx solid #eee;width:55%;padding:0rpx 0rpx 5rpx 30rpx;"></input>
+        </view>
+        <view style="padding-top:50rpx;">
+          <button type="primary" formType="submit" style='background-color:#F76260;color:#fff;'>生成PK擂台</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

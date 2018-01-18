@@ -1,0 +1,13 @@
+<view class="wrap">
+  <block wx:for="{{qtArray}}" wx:key="index">
+    <view class="q-item">
+      <view  id="{{item.id}}" class="question {{item.qtColor?'showque':'hideque'}}" bindtap="clickTab">
+        <text  id="{{item.id}}" class="lt">{{item.question}}</text><text class="rt icon-m" bindtap="clickTab" id="{{item.id}}">≡</text>
+      </view>
+      <view class="answer {{item.showAs?'show':'hide'}}">{{item.answer}}</view>
+    </view>
+</block>
+</view>
+<view class="report">
+ <text bindtap="report">举报</text>
+</view>
